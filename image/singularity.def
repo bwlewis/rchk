@@ -1,6 +1,6 @@
 BootStrap: debootstrap
 OSVersion: zesty
-MirrorURL: http://archive.ubuntu.com/ubuntu/
+MirrorURL: http://old-releases.ubuntu.com/ubuntu/
 
 %post
   sed -i 's/main/main restricted universe/g' /etc/apt/sources.list
@@ -19,12 +19,12 @@ MirrorURL: http://archive.ubuntu.com/ubuntu/
 
   # wpllvm
   cd /opt
-  git clone "git://www.github.com/travitch/whole-program-llvm"
+  git clone "https://www.github.com/travitch/whole-program-llvm"
   pip install whole-program-llvm/   
 
   # rchk
   cd /opt
-  git clone git://www.github.com/kalibera/rchk &&  \
+  git clone https://www.github.com/kalibera/rchk &&  \
     cd rchk && \
     cd src && \
     make -j `cat /proc/cpuinfo | grep "core id" | wc -l` LLVM=/usr CXX=g++
