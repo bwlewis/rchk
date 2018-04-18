@@ -15,12 +15,12 @@ MirrorURL: http://old-releases.ubuntu.com/ubuntu/
   apt-get install -y clang-4.0 llvm-4.0-dev clang++-4.0 clang llvm-dev libc++-dev libc++abi-dev
   apt-get clean
   locale-gen en_US.UTF-8
-  pip install --upgrade pip
+#  pip install --upgrade pip
 
   # wpllvm
   cd /opt
   git clone "https://www.github.com/travitch/whole-program-llvm"
-  pip install whole-program-llvm/   
+  python -m pip install whole-program-llvm/   
 
   # rchk
   cd /opt
